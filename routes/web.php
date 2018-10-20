@@ -23,4 +23,17 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::resource('users', 'UserController');
     Route::resource('roles', 'RoleController');
     Route::resource('posts', 'PostController');
+
+    Route::resource('thumbnails', 'ThumbnailController');
 });
+
+//Route::resource('/thumbs', 'ThumbnailController');
+
+
+// usage inside a laravel route
+/*Route::get('/', function()
+{
+    $img = Image::make('foo.jpg')->resize(300, 200);
+
+    return $img->response('jpg');
+});*/
